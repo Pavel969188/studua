@@ -7,6 +7,21 @@ layout: default
       <div class="col-lg-9">
         <h1 class="display-4">{{ page.h1 }}</h1>
         {% if page.lead %}<p class="lead mt-4">{{ page.lead }}</p>{% endif %}
+
+        {% if page.hero_primary_label or page.hero_secondary_label %}
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          {% if page.hero_primary_label %}
+          <a class="btn btn-dark" href="{{ page.hero_primary_url | relative_url }}">{{ page.hero_primary_label }}</a>
+          {% endif %}
+          {% if page.hero_secondary_label %}
+          <a class="btn btn-outline-dark" href="{{ page.hero_secondary_url | relative_url }}">{{ page.hero_secondary_label }}</a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if page.hero_audience %}
+        <p class="small text-secondary mt-4 mb-0">{{ page.hero_audience }}</p>
+        {% endif %}
       </div>
     </div>
   </div>
