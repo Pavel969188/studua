@@ -1,0 +1,8 @@
+title: "Название студии"
+lang: ru
+url: "https://pavel969188.github.io"
+baseurl: "/studua"
+markdown: kramdown
+exclude:
+  - README.md
+  - MODX-MAP.md
