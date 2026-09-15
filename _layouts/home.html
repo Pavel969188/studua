@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<section class="py-5 py-lg-6">
+  <div class="container py-lg-5">
+    <div class="row">
+      <div class="col-lg-9">
+        <h1 class="display-4">{{ page.h1 }}</h1>
+        {% if page.lead %}<p class="lead mt-4">{{ page.lead }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% for section in page.sections %}
+<section class="py-5 border-top" id="{{ section.id }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>{{ section.title }}</h2>
+        {% if section.text %}<p>{{ section.text }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{% include project-form.html %}
