@@ -1,0 +1,29 @@
+<header class="border-bottom bg-white">
+  <nav class="navbar navbar-expand-lg" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Услуги</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ '/korporativnyj-sajt/' | relative_url }}">Корпоративные сайты</a></li>
+              <li><a class="dropdown-item" href="{{ '/sajt-katalog/' | relative_url }}">Сайты-каталоги</a></li>
+              <li><a class="dropdown-item" href="{{ '/internet-magazin/' | relative_url }}">Интернет-магазины</a></li>
+              <li><a class="dropdown-item" href="{{ '/dorabotka-sajta/' | relative_url }}">Доработка и поддержка</a></li>
+              <li><a class="dropdown-item" href="{{ '/redizajn-sajta/' | relative_url }}">Редизайн</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="{{ '/portfolio/' | relative_url }}">Портфолио</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ '/ceny/' | relative_url }}">Цены</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ '/o-studii/' | relative_url }}">О студии</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ '/kontakty/' | relative_url }}">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
