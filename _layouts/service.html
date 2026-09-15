@@ -21,4 +21,4 @@ layout: default
 </section>
 {% endfor %}
 
-{% include project-form.html %}
+{% if page.show_form %}{% include project-form.html %}{% endif %}
