@@ -20,7 +20,7 @@ layout: default
         {% if page.hero_primary_label or page.hero_secondary_label %}
         <div class="d-flex flex-wrap gap-2 mt-4">
           {% if page.hero_primary_label %}
-          <a class="btn btn-dark" href="{{ page.hero_primary_url | relative_url }}">{{ page.hero_primary_label }}</a>
+          <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#projectModal">{{ page.hero_primary_label }}</button>
           {% endif %}
           {% if page.hero_secondary_label %}
           <a class="btn btn-outline-dark" href="{{ page.hero_secondary_url | relative_url }}">{{ page.hero_secondary_label }}</a>
@@ -53,3 +53,4 @@ layout: default
 {% endfor %}
 
 {% include project-form.html %}
+{% include project-modal.html %}
