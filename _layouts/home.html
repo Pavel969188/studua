@@ -6,6 +6,7 @@ layout: default
     <div class="row">
       <div class="col-lg-9">
         <h1 class="display-4">{{ page.h1 }}</h1>
+        {% if page.hero_usp %}<p class="h4 fw-normal mt-3">{{ page.hero_usp }}</p>{% endif %}
         {% if page.lead %}<p class="lead mt-4">{{ page.lead }}</p>{% endif %}
 
         {% if page.hero_primary_label or page.hero_secondary_label %}
