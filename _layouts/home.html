@@ -43,6 +43,9 @@ layout: default
       <div class="col-lg-8">
         <h2>{{ section.title }}</h2>
         {% if section.text %}<p>{{ section.text }}</p>{% endif %}
+        {% if section.link_label and section.link_url %}
+        <a class="btn btn-outline-dark mt-2" href="{{ section.link_url | relative_url }}">{{ section.link_label }}</a>
+        {% endif %}
       </div>
     </div>
   </div>
