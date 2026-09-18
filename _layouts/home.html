@@ -106,8 +106,9 @@ layout: default
             <p class="text-secondary mb-2">{{ item.type }}</p>
             <h3 class="h4 card-title">{{ item.title }}</h3>
             <p class="card-text">{{ item.text }}</p>
-            <div class="mt-auto pt-2">
-              <a class="btn btn-dark" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Подробнее</a>
+            <div class="d-flex flex-wrap gap-2 mt-auto pt-2">
+              <a class="btn btn-dark" href="{{ item.details_url | relative_url }}">Подробнее</a>
+              <a class="btn btn-outline-dark" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
             </div>
           </div>
         </article>
