@@ -175,6 +175,50 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.pskov %}
+<section class="py-5 border-top" id="pskov">
+  <div class="container">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-7">
+        <p class="text-secondary mb-2">{{ page.pskov.eyebrow }}</p>
+        <h2>{{ page.pskov.title }}</h2>
+        <p class="mt-3">{{ page.pskov.text }}</p>
+        <a class="btn btn-outline-dark mt-2" href="{{ page.pskov.link_url | relative_url }}">{{ page.pskov.link_label }}</a>
+      </div>
+      <div class="col-lg-5">
+        <div class="border-top pt-3">
+          {% for point in page.pskov.points %}
+          <p class="mb-3">{{ point }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.spb %}
+<section class="py-5 border-top" id="sankt-peterburg">
+  <div class="container">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-5 order-lg-1">
+        <div class="border-top pt-3">
+          {% for point in page.spb.points %}
+          <p class="mb-3">{{ point }}</p>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-7 order-lg-2">
+        <p class="text-secondary mb-2">{{ page.spb.eyebrow }}</p>
+        <h2>{{ page.spb.title }}</h2>
+        <p class="mt-3">{{ page.spb.text }}</p>
+        <a class="btn btn-outline-dark mt-2" href="{{ page.spb.link_url | relative_url }}">{{ page.spb.link_label }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% for section in page.sections %}
 <section class="py-5 border-top" id="{{ section.id }}">
   <div class="container">
