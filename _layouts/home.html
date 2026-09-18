@@ -146,6 +146,35 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.price_factors %}
+<section class="py-5 border-top" id="price">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-8">
+        <h2>Стоимость</h2>
+        {% if page.price_intro %}<p class="mb-0">{{ page.price_intro }}</p>{% endif %}
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for item in page.price_factors %}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="h5 card-title">{{ item.title }}</h3>
+            <p class="card-text mb-0">{{ item.text }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="d-flex flex-wrap gap-2 mt-4">
+      <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#projectModal">Получить оценку</button>
+      <a class="btn btn-outline-dark" href="{{ '/ceny/' | relative_url }}">Смотреть цены</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% for section in page.sections %}
 <section class="py-5 border-top" id="{{ section.id }}">
   <div class="container">
