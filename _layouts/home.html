@@ -89,6 +89,38 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.cases %}
+<section class="py-5 border-top" id="cases">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-8">
+        <h2>Кейсы</h2>
+        {% if page.cases_intro %}<p class="mb-0">{{ page.cases_intro }}</p>{% endif %}
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
+      {% for item in page.cases %}
+      <div class="col">
+        <article class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <p class="text-secondary mb-2">{{ item.type }}</p>
+            <h3 class="h4 card-title">{{ item.title }}</h3>
+            <p class="card-text">{{ item.text }}</p>
+            <div class="mt-auto pt-2">
+              <a class="btn btn-dark" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="mt-4">
+      <a class="btn btn-outline-dark" href="{{ '/portfolio/' | relative_url }}">Все работы</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% for section in page.sections %}
 <section class="py-5 border-top" id="{{ section.id }}">
   <div class="container">
