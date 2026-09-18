@@ -122,6 +122,30 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.process_steps %}
+<section class="py-5 border-top" id="process">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-8">
+        <h2>Процесс работы</h2>
+        {% if page.process_intro %}<p class="mb-0">{{ page.process_intro }}</p>{% endif %}
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+      {% for step in page.process_steps %}
+      <div class="col">
+        <div class="h-100 border-top pt-3">
+          <p class="text-secondary small mb-2">{{ step.number }}</p>
+          <h3 class="h5">{{ step.title }}</h3>
+          <p class="mb-0">{{ step.text }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% for section in page.sections %}
 <section class="py-5 border-top" id="{{ section.id }}">
   <div class="container">
