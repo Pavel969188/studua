@@ -64,6 +64,31 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.audience_cards %}
+<section class="py-5 border-top" id="audience">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-8">
+        <h2>Для кого работаем</h2>
+        {% if page.audience_intro %}<p class="mb-0">{{ page.audience_intro }}</p>{% endif %}
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      {% for item in page.audience_cards %}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="h5 card-title">{{ item.title }}</h3>
+            <p class="card-text mb-0">{{ item.text }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% for section in page.sections %}
 <section class="py-5 border-top" id="{{ section.id }}">
   <div class="container">
